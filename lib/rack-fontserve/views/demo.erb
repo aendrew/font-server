@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>rack-fontserve demo</title>
+  <title>The Times Font Server</title>
 <% Font.all.each do |font| %>
   <link rel="stylesheet" href="/public/font/<%= font.name %>.css"/>  
 <% end %>
@@ -16,10 +16,10 @@
       background-color: #222526; 
       padding: 40px 20px;
       margin: 0;
-      color: #7F203B;
+      color: white;
       font-size: 72px;
-      text-shadow: #D94F00 2px 2px 0px, #F28D00 4px 4px 0px, #FFBB6E 6px 6px 0px;
       border-bottom: 4px solid black;
+      font-family: 'FlamaSemicondensed-Basic', sans-serif;
     }
     
     footer, footer a {
@@ -38,15 +38,16 @@
 </head>
 
 <body>
-  <h1>rack-fontserve</h1>
+  <h1>Times Font Server</h1> 
   <% Font.all.each do |font| %>
   <div class="<%= font.name %>">
     <h2><%= font.name %></h2>
-    <p>The quick brown fox jumps over the lazy dog (possibly)</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue, metus id imperdiet fermentum, nulla eros semper lacus, eget accumsan velit arcu et arcu. Ut euismod tellus est, sit amet commodo ligula laoreet ornare. Fusce suscipit orci nec sapien ultrices, ac congue mi congue. Nullam hendrerit diam elementum justo faucibus, vel vestibulum nisl porttitor. Aenean justo diam, tempor posuere enim vitae, malesuada ullamcorper sapien. Aliquam venenatis pretium felis, sed placerat tellus vulputate consectetur. Morbi scelerisque sodales mi, a viverra ante. Ut tincidunt ac ligula eget consequat. Nunc id augue vitae eros tincidunt pellentesque non id magna. Ut suscipit urna eu purus vestibulum, non laoreet justo lacinia. Morbi nunc lorem, congue et augue non, ullamcorper euismod elit. In vel laoreet est, in vehicula odio. Aliquam eget venenatis massa, quis pretium dui. Suspendisse euismod viverra dui sed ultricies.</p>
   </div>
   <% end %>
   <footer>
-    <a href="https://github.com/colszowka/rack-fontserve">rack-fontserve</a> v<%= FONTSERVE_VERSION %>
+    Updated version by: <a href="http://aendrew.com">Ændrew</a>.
+    Original version by: <a href="https://github.com/colszowka/rack-fontserve">rack-fontserve</a> v<%= FONTSERVE_VERSION %>
   </footer>
 </body>
 </html>
